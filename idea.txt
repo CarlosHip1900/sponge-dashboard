@@ -1,0 +1,5 @@
+IDEAIS 
+
+- Should create direct minecraft server
+- Get... actions with player in proxy
+- Show console, send command, create custom server with custom proxy, and custom properties

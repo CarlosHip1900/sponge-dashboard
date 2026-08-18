@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BitePanel | Home</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c3423ba623.js" crossorigin="anonymous"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="min-h-screen bg-[#080808] font-montserrat text-white">
+
+    <!-- HEADER -->
+    <header class="pt-5">
+        <div class="max-w-[1650px] mx-auto flex justify-center">
+            <nav class="bg-black/40 border border-cyan-400/20 rounded-full px-4 py-2">
+                <ul class="flex items-center gap-3">
+                    <li>
+                        <a href="main.html"
+                            class="px-6 py-2 rounded-full font-bold text-sm hover:border hover:border-blue-500 hover:bg-black">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="px-6 py-2 rounded-full border-2 border-transparent
+                           bg-gradient-to-b from-neutral-700 to-neutral-900
+                           bg-clip-padding
+                           border-gradient-to-r from-blue-900 to-cyan-400">
+                        <a href="#" class="font-bold text-sm">
+                            Nodes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="proxies.html"
+                            class="px-6 py-2 rounded-full font-bold text-sm hover:border hover:border-blue-500 hover:bg-black">
+                            Proxies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="databases.html"
+                            class="px-6 py-2 rounded-full font-bold text-sm hover:border hover:border-blue-500 hover:bg-black">
+                            Database
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="pt-12">
+        <div class="max-w-[1650px] mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 justify-center">
+
+
+                <div class="col-span-3 grid grid-cols-1 lg:grid-cols-2 gap-6 justify-center">
+                    <!-- HOST OVERVIEW CARD -->
+                    <div
+                        class="col-span-1 rounded-2xl p-5 bg-gradient-to-bl from-black via-[#131313] to-black border border-neutral-700">
+
+                        <div class="flex items-center gap-5">
+                            <div class="bg-gray-500/20 p-4 rounded-xl text-2xl">
+                                <i class="fa-solid fa-house-laptop"></i>
+                            </div>
+
+                            <div>
+                                <h4 class="text-base font-semibold">Host Overview</h4>
+                                <p class="text-sm text-gray-400">Check in this place, some informations about this host
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-5 mt-7">
+                            <div class="bg-gray-500/20 p-3 rounded-xl text-lg">
+                                <i class="fa-solid fa-pencil"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-semibold">vps_01_br</h4>
+                                <p class="text-xs text-gray-400">Name/Id by this machine, it is should not be change
+                                    with
+                                    running servers</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-5 mt-3">
+                            <div class="bg-gray-500/20 p-3 rounded-xl text-lg">
+                                <i class="fa-solid fa-signal"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-semibold text-green-500">Online</h4>
+                                <p class="text-xs text-gray-400">Represent status by this machine</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-5 mt-3">
+                            <div class="bg-gray-500/20 p-3 rounded-xl text-lg">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-semibold">Brazil</h4>
+                                <p class="text-xs text-gray-400">Place where stay this machine</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-5 mt-3">
+                            <div class="bg-gray-500/20 p-3 rounded-xl text-lg">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-semibold">120 Servers and 5 Proxies</h4>
+                                <p class="text-xs text-gray-400">How many servers and proxies this machine support</p>
+                            </div>
+
+                        </div>
+                        <div class="flex items-center gap-5 mt-3">
+                            <div class="bg-gray-500/20 p-3 rounded-xl text-lg">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-semibold">Ubuntu 24.04</h4>
+                                <p class="text-xs text-gray-400">OS by this machine</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- SYSTEM INFORMATION CARD -->
+                    <div
+                        class="rounded-2xl p-5 bg-gradient-to-bl from-black via-[#131313] to-black border border-neutral-700">
+
+                        <!-- Header -->
+                        <div class="flex items-center gap-5">
+                            <div class="bg-gray-500/20 p-4 rounded-xl text-2xl">
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+
+                            <div>
+                                <h4 class="text-base font-semibold">System Status</h4>
+                                <p class="text-sm text-gray-400">Live metrics from this node</p>
+                            </div>
+                        </div>
+
+                        <!-- Metrics -->
+                        <div class="mt-6 space-y-5">
+
+                            <!-- CPU -->
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-gray-400">CPU Usage</span>
+                                    <span class="font-semibold">67%</span>
+                                </div>
+                                <div class="w-full h-2 bg-gray-500/20 rounded-full overflow-hidden">
+                                    <div class="h-full bg-blue-500 rounded-full" style="width:62%"></div>
+                                </div>
+                            </div>
+
+                            <!-- RAM -->
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-gray-400">Memory Usage</span>
+                                    <span class="font-semibold">34.9 GB / 48 GB</span>
+                                </div>
+                                <div class="w-full h-2 bg-gray-500/20 rounded-full overflow-hidden">
+                                    <div class="h-full bg-emerald-500 rounded-full" style="width:39%"></div>
+                                </div>
+                            </div>
+
+                            <!-- DISK -->
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-gray-400">Disk Usage</span>
+                                    <span class="font-semibold">20 GB / 1000 GB</span>
+                                </div>
+                                <div class="w-full h-2 bg-gray-500/20 rounded-full overflow-hidden">
+                                    <div class="h-full bg-yellow-500 rounded-full" style="width:2%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-gray-400">Servers Usage</span>
+                                    <span class="font-semibold">23 / 120</span>
+                                </div>
+                                <div class="w-full h-2 bg-gray-500/20 rounded-full overflow-hidden">
+                                    <div class="h-full bg-green-700 rounded-full" style="width:22%"></div>
+                                </div>
+                            </div>
+
+                            <!-- NETWORK -->
+                            <div class="flex justify-between text-sm text-gray-300 pt-3 border-t border-neutral-700">
+                                <span>Network In</span>
+                                <span class="font-semibold">124 Mbps</span>
+
+                                <span>Network Out</span>
+                                <span class="font-semibold">98 Mbps</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GROUPS ROW -->
+                <div class="col-span-3 mt-20">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mb-10">
+
+                        <!-- LEFT: DESCRIPTION -->
+                        <div class="lg:col-span-2 flex gap-5 mt-8">
+
+                            <!-- ICON -->
+                            <div class="bg-gray-500/20 p-4 rounded-xl text-2xl shrink-0">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+
+                            <!-- TEXT -->
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">Groups</h4>
+                                <p class="text-sm text-gray-400 leading-relaxed max-w-3xl">
+                                    Groups represent isolated network contexts inside your infrastructure.
+                                    Servers within the same group can see each other, transfer players,
+                                    and share logic such as matchmaking or scaling rules.
+                                    <br><br>
+                                    For example, a <span class="text-white font-medium">BedWars</span> group
+                                    may include multiple game instances that only interact with each other,
+                                    without affecting other game modes like Factions or Lobby.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- RIGHT: EXAMPLE -->
+                        <div class="lg:col-span-1">
+
+                            <p class="text-gray-400 mb-3 font-semibold text-sm">Example</p>
+
+                            <!-- GROUP CONTAINER -->
+                            <div class="bg-[#101010] border-2 border-emerald-500/40 rounded-2xl p-6 w-full">
+
+                                <!-- Group title -->
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="bg-emerald-500/20 p-2 rounded-lg text-emerald-400">
+                                        <i class="fa-solid fa-layer-group"></i>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-sm">bed-wars-group</h4>
+                                        <p class="text-xs text-gray-400">Shared BedWars context</p>
+                                    </div>
+                                </div>
+
+                                <!-- SERVERS GRID -->
+                                <div class="grid grid-cols-3 gap-3">
+
+                                    <!-- SERVER -->
+                                    <div class="bg-gray-500/10 border border-neutral-700    rounded-xl p-3 text-center">
+                                        <div
+                                            class="bg-gray-500/20 w-10 h-10 mx-auto rounded-lg flex items-center justify-center text-gray-300 mb-2">
+                                            <i class="fa-solid fa-cube"></i>
+                                        </div>
+                                        <p class="text-xs font-medium">bw_1</p>
+                                    </div>
+
+                                    <div class="bg-gray-500/10 border border-neutral-700 rounded-xl p-3 text-center">
+                                        <div
+                                            class="bg-gray-500/20 w-10 h-10 mx-auto rounded-lg flex items-center justify-center text-gray-300 mb-2">
+                                            <i class="fa-solid fa-cube"></i>
+                                        </div>
+                                        <p class="text-xs font-medium">bw_2</p>
+                                    </div>
+
+                                    <div class="bg-gray-500/10 border border-neutral-700 rounded-xl p-3 text-center">
+                                        <div
+                                            class="bg-gray-500/20 w-10 h-10 mx-auto rounded-lg flex items-center justify-center text-gray-300 mb-2">
+                                            <i class="fa-solid fa-cube"></i>
+                                        </div>
+                                        <p class="text-xs font-medium">bw_3</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- GROUPS MAIN CARD -->
+                    <div class="rounded-2xl p-6
+                                bg-gradient-to-bl from-black via-[#131313] to-black
+                                border border-neutral-700">
+
+                        <!-- HEADER -->
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-gray-500/20 p-4 rounded-xl text-2xl">
+                                    <i class="fa-solid fa-layer-group"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-base font-semibold">Server Groups</h4>
+                                    <p class="text-sm text-gray-400">
+                                        Network contexts used to isolate and scale servers
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button class="bg-emerald-500/20 hover:bg-emerald-500/30
+                                            text-emerald-400 rounded-xl px-4 py-2 text-sm font-semibold transition">
+                                <i class="fa-solid fa-plus mr-2"></i>
+                                Create Group
+                            </button>
+                        </div>
+
+                        <!-- GROUPS GRID -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+
+                            <!-- BEDWARS GROUP -->
+                            <div class="bg-[#181818] border border-neutral-700 rounded-xl p-4
+                                        hover:border-emerald-500/40 transition cursor-pointer">
+
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="bg-emerald-500/20 p-3 rounded-lg text-emerald-400">
+                                            <i class="fa-solid fa-fire"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-sm">BedWars</h4>
+                                            <p class="text-xs text-gray-400">bed-wars</p>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-xs px-2 py-1 rounded-full bg-emerald-500/20 text-emerald-400">
+                                        ACTIVE
+                                    </span>
+                                </div>
+
+                                <div class="grid grid-cols-3 text-center text-xs mb-3">
+                                    <div>
+                                        <p class="text-gray-400">Servers</p>
+                                        <p class="font-bold">12</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-400">Players</p>
+                                        <p class="font-bold">234</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-400">Type</p>
+                                        <p class="font-bold">Dynamic</p>
+                                    </div>
+                                </div>
+
+                                <button class="w-full bg-gray-600/30 hover:bg-gray-600/50
+                       rounded-lg py-2 text-xs font-semibold transition">
+                                    View Servers
+                                </button>
+                            </div>
+
+                            <!-- FACTIONS GROUP -->
+                            <div class="bg-[#181818] border border-neutral-700 rounded-xl p-4
+                    hover:border-purple-500/40 transition cursor-pointer">
+
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="bg-purple-500/20 p-3 rounded-lg text-purple-400">
+                                            <i class="fa-solid fa-shield-halved"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-sm">Factions</h4>
+                                            <p class="text-xs text-gray-400">factions</p>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-xs px-2 py-1 rounded-full
+                             bg-yellow-500/20 text-yellow-400">
+                                        LIMITED
+                                    </span>
+                                </div>
+
+                                <div class="grid grid-cols-3 text-center text-xs mb-3">
+                                    <div>
+                                        <p class="text-gray-400">Servers</p>
+                                        <p class="font-bold">6</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-400">Players</p>
+                                        <p class="font-bold">87</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-400">Type</p>
+                                        <p class="font-bold">Static</p>
+                                    </div>
+                                </div>
+
+                                <button class="w-full bg-gray-600/30 hover:bg-gray-600/50
+                       rounded-lg py-2 text-xs font-semibold transition">
+                                    View Servers
+                                </button>
+                            </div>
+
+                            <!-- LOBBY GROUP -->
+                            <div class="bg-[#181818] border border-neutral-700 rounded-xl p-4
+                    hover:border-blue-500/40 transition cursor-pointer">
+
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="bg-blue-500/20 p-3 rounded-lg text-blue-400">
+                                            <i class="fa-solid fa-door-open"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-sm">Lobby</h4>
+                                            <p class="text-xs text-gray-400">lobby</p>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-xs px-2 py-1 rounded-full
+                             bg-blue-500/20 text-blue-400">
+                                        STABLE
+                                    </span>
+                                </div>
+
+                                <div class="grid grid-cols-3 text-center text-xs mb-3">
+                                    <div>
+                                        <p class="text-gray-400">Servers</p>
+                                        <p class="font-bold">3</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-400">Players</p>
+                                        <p class="font-bold">140</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-400">Type</p>
+                                        <p class="font-bold">Static</p>
+                                    </div>
+                                </div>
+
+                                <button class="w-full bg-gray-600/30 hover:bg-gray-600/50
+                       rounded-lg py-2 text-xs font-semibold transition">
+                                    View Servers
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RUNNING SERVERS CARD -->
+                <div
+                    class="mt-20 col-span-3 row-span-2 rounded-2xl p-5 bg-gradient-to-bl from-black via-[#131313] to-black border border-neutral-700">
+
+                    <div class="flex items-center gap-5">
+                        <div class="bg-gray-500/20 p-4 rounded-xl text-2xl">
+                            <i class="fa-solid fa-cubes-stacked"></i>
+                        </div>
+
+                        <div class="flex-1">
+                            <h4 class="text-base font-semibold">Running servers</h4>
+                            <p class="text-sm text-gray-400">
+                                See all servers running on this node, regardless of server type.
+                            </p>
+                        </div>
+
+                        <a href="#" class="bg-gray-500/10 hover:bg-gray-500/20
+                                            border border-neutral-700 hover:border-emerald-500/40
+                                            rounded-lg px-4 py-2 text-sm font-medium
+                                            flex items-center gap-2 transition">
+                            See more
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="mt-5">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 justify-center mt-7">
+
+                            <!-- DYNAMIC SERVERS -->
+                            <div class="rounded-2xl p-6
+                                        bg-gradient-to-bl from-black via-[#131313] to-black
+                                        border border-neutral-700
+                                        hover:border-emerald-500/50
+                                        transition cursor-pointer">
+
+                                <!-- HEADER -->
+                                <div class="flex items-center gap-4 mb-5">
+                                    <div class="bg-emerald-500/20 p-4 rounded-xl text-4xl text-emerald-400">
+                                        <i class="fa-solid fa-meteor"></i>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-lg">Dynamic Servers</h4>
+                                        <p class="text-sm text-gray-400">
+                                            Auto-scaled game instances
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- STATS GRID -->
+                                <div class="grid grid-cols-4 gap-4 text-center mb-5">
+
+                                    <div class="bg-gray-500/10 rounded-xl py-3">
+                                        <p class="text-xs text-gray-400">Running</p>
+                                        <p class="text-lg font-bold">10</p>
+                                    </div>
+
+                                    <div class="bg-gray-500/10 rounded-xl py-3">
+                                        <p class="text-xs text-gray-400">Memory</p>
+                                        <p class="text-lg font-bold">7.6 GB</p>
+                                    </div>
+
+                                    <div class="bg-gray-500/10 rounded-xl py-3">
+                                        <p class="text-xs text-gray-400">CPU</p>
+                                        <p class="text-lg font-bold">20%</p>
+                                    </div>
+                                    <div class="bg-gray-500/10 rounded-xl py-3">
+                                        <p class="text-xs text-gray-400">Players</p>
+                                        <p class="text-lg font-bold">124</p>
+                                    </div>
+
+                                </div>
+
+                                <!-- CAPACITY -->
+                                <div class="mb-5">
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span class="text-gray-400">Capacity Usage Ram</span>
+                                        <span class="font-semibold text-emerald-400">7.6 GB / 16 GB</span>
+                                    </div>
+
+                                    <div class="w-full h-2 bg-gray-500/20 rounded-full overflow-hidden">
+                                        <div class="h-full bg-emerald-500 rounded-full transition-all"
+                                            style="width:35%">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CTA -->
+                                <a href="#" class="flex items-center justify-center gap-2
+                                                    bg-emerald-500/20 hover:bg-emerald-500/30
+                                                    text-emerald-400
+                                                    rounded-xl py-2 text-sm font-semibold transition">
+
+                                    View Dynamic Servers
+                                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                                </a>
+
+                            </div>
+
+                            <!-- LOBBY SERVERS -->
+                            <div class="rounded-2xl p-6
+            bg-gradient-to-bl from-black via-[#131313] to-black
+            border border-neutral-700
+            hover:border-blue-500/50
+            transition cursor-pointer">
+
+                                <!-- HEADER -->
+                                <div class="flex items-center gap-4 mb-5">
+                                    <div class="bg-blue-500/20 p-4 rounded-xl text-4xl text-blue-400">
+                                        <i class="fa-solid fa-door-open"></i>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-lg">Lobby Servers</h4>
+                                        <p class="text-sm text-gray-400">
+                                            Player entry points
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- STATS -->
+                                <div class="grid grid-cols-4 gap-4 text-center mb-5">
+
+                                    <div class="bg-gray-500/10 rounded-xl py-3">
+                                        <p class="text-xs text-gray-400">Running</p>
+                                        <p class="text-lg font-bold">4</p>
+                                    </div>
+
+                                    <div class="bg-gray-500/10 rounded-xl py-3">
+                                        <p class="text-xs text-gray-400">Memory</p>
+                                        <p class="text-lg font-bold">12 GB</p>
+                                    </div>
+
+                                    <div class="bg-gray-500/10 rounded-xl py-3">
+                                        <p class="text-xs text-gray-400">CPU</p>
+                                        <p class="text-lg font-bold">34%</p>
+                                    </div>
+                                    <div class="bg-gray-500/10 rounded-xl py-3">
+                                        <p class="text-xs text-gray-400">Players</p>
+                                        <p class="text-lg font-bold">1003</p>
+                                    </div>
+
+                                </div>
+
+                                <!-- CAPACITY -->
+                                <div class="mb-5">
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span class="text-gray-400">Capacity Usage Ram</span>
+                                        <span class="font-semibold text-blue-400">12 GB / 16GB</span>
+                                    </div>
+
+                                    <div class="w-full h-2 bg-gray-500/20 rounded-full overflow-hidden">
+                                        <div class="h-full bg-blue-500 rounded-full" style="width:83%"></div>
+                                    </div>
+                                </div>
+
+                                <!-- CTA -->
+                                <a href="#" class="flex items-center justify-center gap-2
+              bg-blue-500/20 hover:bg-blue-500/30
+              text-blue-400
+              rounded-xl py-2 text-sm font-semibold transition">
+                                    View Lobby Servers
+                                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                                </a>
+
+                            </div>
+
+
+                            <!-- CUSTOM SERVERS -->
+                            <div class="rounded-2xl p-6
+                                        bg-gradient-to-bl from-black via-[#131313] to-black
+                                        border border-neutral-700
+                                        hover:border-purple-500/50
+                                        transition cursor-pointer">
+
+                                <!-- HEADER -->
+                                <div class="flex items-center gap-4 mb-5">
+                                    <div class="bg-purple-500/20 p-4 rounded-xl text-4xl text-purple-400">
+                                        <i class="fa-solid fa-sliders"></i>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-lg">Custom Servers</h4>
+                                        <p class="text-sm text-gray-400">
+                                            Manually configured services
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- STATS -->
+                                <div class="grid grid-cols-4 gap-4 text-center mb-5">
+
+                                    <div class="bg-gray-500/10 rounded-xl py-3">
+                                        <p class="text-xs text-gray-400">Running</p>
+                                        <p class="text-lg font-bold">9</p>
+                                    </div>
+
+                                    <div class="bg-gray-500/10 rounded-xl py-3">
+                                        <p class="text-xs text-gray-400">Memory</p>
+                                        <p class="text-lg font-bold">15.3 GB</p>
+                                    </div>
+
+                                    <div class="bg-gray-500/10 rounded-xl py-3">
+                                        <p class="text-xs text-gray-400">CPU</p>
+                                        <p class="text-lg font-bold">13%</p>
+                                    </div>
+                                    <div class="bg-gray-500/10 rounded-xl py-3">
+                                        <p class="text-xs text-gray-400">Players</p>
+                                        <p class="text-lg font-bold">284</p>
+                                    </div>
+
+                                </div>
+
+                                <!-- RESOURCE LOAD -->
+                                <div class="mb-5">
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span class="text-gray-400">Capacity Usage Ram</span>
+                                        <span class="font-semibold text-purple-400">15.3 GB / 24 GB</span>
+                                    </div>
+
+                                    <div class="w-full h-2 bg-gray-500/20 rounded-full overflow-hidden">
+                                        <div class="h-full bg-purple-500 rounded-full" style="width:61%"></div>
+                                    </div>
+                                </div>
+
+                                <!-- CTA -->
+                                <a href="#" class="flex items-center justify-center gap-2
+              bg-purple-500/20 hover:bg-purple-500/30
+              text-purple-400
+              rounded-xl py-2 text-sm font-semibold transition">
+                                    View Custom Servers
+                                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 justify-center mt-7">
+                        <!-- CREATE SERVER -->
+                        <div
+                            class="rounded-2xl p-5 bg-gradient-to-bl from-black via-[#131313] to-black border border-neutral-700 hover:border-emerald-500/40 transition cursor-pointer">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-emerald-500/20 p-4 rounded-xl text-2xl text-emerald-400">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-base">Create Server</h4>
+                                    <p class="text-sm text-gray-400">
+                                        Deploy a new server manually on this node.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CREATE FROM TEMPLATE -->
+                        <div
+                            class="rounded-2xl p-5 bg-gradient-to-bl from-black via-[#131313] to-black border border-neutral-700 hover:border-cyan-500/40 transition cursor-pointer">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-cyan-500/20 p-4 rounded-xl text-2xl text-cyan-400">
+                                    <i class="fa-solid fa-layer-group"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-base">Create from Template</h4>
+                                    <p class="text-sm text-gray-400">
+                                        Launch a server using an existing template.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- IMPORT SERVER -->
+                        <div
+                            class="rounded-2xl p-5 bg-gradient-to-bl from-black via-[#131313] to-black border border-neutral-700 hover:border-blue-500/40 transition cursor-pointer">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-500/20 p-4 rounded-xl text-2xl text-blue-400">
+                                    <i class="fa-solid fa-upload"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-base">Import Server</h4>
+                                    <p class="text-sm text-gray-400">
+                                        Import an existing server directory.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+
+                        <!-- BULK START / STOP -->
+                        <div
+                            class="rounded-2xl p-4 bg-[#101010] border border-neutral-800 hover:border-amber-500/40 transition cursor-pointer">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-amber-500/20 p-3 rounded-xl text-xl text-amber-400">
+                                    <i class="fa-solid fa-power-off"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-sm">Bulk Start / Stop</h4>
+                                    <p class="text-xs text-gray-400">
+                                        Control all servers on this node.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CLONE SERVER -->
+                        <div
+                            class="rounded-2xl p-4 bg-[#101010] border border-neutral-800 hover:border-indigo-500/40 transition cursor-pointer">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-indigo-500/20 p-3 rounded-xl text-xl text-indigo-400">
+                                    <i class="fa-solid fa-clone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-sm">Clone Server</h4>
+                                    <p class="text-xs text-gray-400">
+                                        Duplicate an existing server.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CLEANUP FILES -->
+                        <div
+                            class="rounded-2xl p-4 bg-[#101010] border border-neutral-800 hover:border-red-500/40 transition cursor-pointer">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-red-500/20 p-3 rounded-xl text-xl text-red-400">
+                                    <i class="fa-solid fa-broom"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-sm">Cleanup Files</h4>
+                                    <p class="text-xs text-gray-400">
+                                        Remove unused server data.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NODE SETTINGS -->
+                        <div
+                            class="rounded-2xl p-4 bg-[#101010] border border-neutral-800 hover:border-gray-500/40 transition cursor-pointer">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-gray-500/20 p-3 rounded-xl text-xl text-gray-300">
+                                    <i class="fa-solid fa-gear"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-sm">Node Settings</h4>
+                                    <p class="text-xs text-gray-400">
+                                        Network, limits, and system config.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- TEMPLATE ROW-->
+                <div class="col-span-3 mt-20">
+
+                    <!-- TEMPLATE INFO -->
+                    <div class="flex items-start gap-5 mb-10">
+
+                        <!-- Icon -->
+                        <div class="bg-gray-500/20 p-4 rounded-xl text-2xl">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+
+                        <!-- Text -->
+                        <div>
+                            <h4 class="text-lg font-semibold mb-1">Server Templates</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed max-w-3xl">
+                                Templates are predefined server configurations that allow you to deploy
+                                Minecraft servers instantly without repeating setup steps.
+                                They define the server type, version, plugins, JVM flags, resource limits,
+                                and startup behavior.
+                                <br><br>
+                                By using templates, you can scale your network faster, maintain consistency
+                                across servers, and reduce human error when deploying or auto-scaling
+                                game instances.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- TEMPLATE GRID -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 justify-center">
+
+                        <!-- SERVER TEMPLATES CARD -->
+                        <div
+                            class="col-span-2 rounded-2xl p-5 bg-gradient-to-bl from-black via-[#131313] to-black border border-neutral-700">
+
+                            <!-- Header -->
+                            <div class="flex items-center gap-5">
+                                <div class="bg-gray-500/20 p-4 rounded-xl text-2xl">
+                                    <i class="fa-solid fa-cubes-stacked"></i>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-base font-semibold">Server Templates</h4>
+                                    <p class="text-sm text-gray-400">
+                                        Instead of create every single config server, why try create template?
+                                        It's super useful for dynamic servers.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Body -->
+                            <div class="mt-5">
+                                <ul>
+                                    <li
+                                        class="group flex items-center justify-between bg-[#181818] rounded-xl p-4 gap-6 hover:bg-[#1f1f1f] transition">
+
+                                        <!-- Left: Template Info -->
+                                        <div class="flex items-center gap-4">
+                                            <div
+                                                class="bg-gray-500/20 p-3 rounded-xl text-lg group-hover:scale-105 transition">
+                                                <i class="fa-solid fa-cubes"></i>
+                                            </div>
+
+                                            <div>
+                                                <h4 class="font-semibold text-sm flex items-center gap-2">
+                                                    Bed Wars Summer
+                                                    <span
+                                                        class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">
+                                                        Active
+                                                    </span>
+                                                </h4>
+                                                <p class="text-xs text-gray-400">bw_summer_2024</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Right: Actions -->
+                                        <div class="flex items-center gap-3">
+                                            <a href="#"
+                                                class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-700 hover:bg-gray-600 transition">
+                                                Config
+                                            </a>
+
+                                            <a href="#"
+                                                class="px-4 py-2 rounded-lg text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 transition">
+                                                Details
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li
+                                        class="group flex items-center justify-between bg-[#181818] rounded-xl p-4 gap-6 hover:bg-[#1f1f1f] transition">
+
+                                        <!-- Left: Template Info -->
+                                        <div class="flex items-center gap-4">
+                                            <div
+                                                class="bg-gray-500/20 p-3 rounded-xl text-lg group-hover:scale-105 transition">
+                                                <i class="fa-solid fa-cubes"></i>
+                                            </div>
+
+                                            <div>
+                                                <h4 class="font-semibold text-sm flex items-center gap-2">
+                                                    Lobby Core
+                                                    <span
+                                                        class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">
+                                                        Active
+                                                    </span>
+                                                </h4>
+                                                <p class="text-xs text-gray-400">lobby_core_v2</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Right: Actions -->
+                                        <div class="flex items-center gap-3">
+                                            <a href="#"
+                                                class="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-700 hover:bg-gray-600 transition">
+                                                Config
+                                            </a>
+
+                                            <a href="#"
+                                                class="px-4 py-2 rounded-lg text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 transition">
+                                                Details
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Footer -->
+                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 justify-center mt-7">
+                                <!-- CREATE TEMPLATE -->
+                                <div
+                                    class="rounded-2xl p-5 bg-gradient-to-bl from-black via-[#131313] to-black border border-neutral-700 hover:border-emerald-500/40 transition cursor-pointer">
+                                    <div class="flex items-center gap-4">
+                                        <div class="bg-emerald-500/20 p-4 rounded-xl text-2xl text-emerald-400">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-base">Create </h4>
+                                            <p class="text-sm text-gray-400">
+                                                Deploy a new template manually on this node.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="rounded-2xl p-5 bg-gradient-to-bl from-black via-[#131313] to-black border border-neutral-700 hover:border-yellow-500/40 transition cursor-pointer">
+                                    <div class="flex items-center gap-4">
+                                        <div class="bg-yellow-500/20 p-4 rounded-xl text-2xl text-yellow-400">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-base">Scaling Rules</h4>
+                                            <p class="text-sm text-gray-400">
+                                                Define auto-scale behavior for template-based servers.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="rounded-2xl p-5 bg-gradient-to-bl from-black via-[#131313] to-black border border-neutral-700 hover:border-red-500/40 transition cursor-pointer">
+                                    <div class="flex items-center gap-4">
+                                        <div class="bg-red-500/20 p-4 rounded-xl text-2xl text-red-400">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-base">Cleanup Templates</h4>
+                                            <p class="text-sm text-gray-400">
+                                                Remove unused or orphaned templates from this node.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        <!-- TEMPLATE IN USE CARD -->
+                        <div
+                            class="rounded-2xl p-5 bg-gradient-to-bl from-black via-[#131313] to-black border border-neutral-700">
+
+                            <!-- Header -->
+                            <div class="flex items-center gap-5">
+                                <div class="bg-gray-500/20 p-4 rounded-xl text-2xl">
+                                    <i class="fa-solid fa-layer-group"></i>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-base font-semibold">Templates in use</h4>
+                                    <p class="text-sm text-gray-400">
+                                        Active templates currently running servers on this machine.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- List -->
+                            <div class="mt-6">
+                                <ul class="space-y-4">
+
+                                    <!-- TEMPLATE ITEM -->
+                                    <li class="flex items-center justify-between bg-[#181818] rounded-lg p-4">
+                                        <div class="flex items-center gap-4">
+                                            <div class="bg-gray-500/20 p-3 rounded-xl text-lg">
+                                                <i class="fa-solid fa-cubes"></i>
+                                            </div>
+
+                                            <div>
+                                                <h4 class="font-semibold text-sm">BedWars Summer</h4>
+                                                <p class="text-xs text-gray-400">bw_summer_2024</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center gap-6 text-sm">
+                                            <!-- INSTANCES -->
+                                            <div class="text-center">
+                                                <p class="text-gray-400 text-xs">Instances</p>
+                                                <p class="font-semibold">6</p>
+                                            </div>
+
+                                            <!-- AUTOSCALE -->
+                                            <span class="px-3 py-1 rounded-full text-xs font-semibold
+                                 bg-emerald-500/20 text-emerald-400">
+                                                Auto-scale ON
+                                            </span>
+                                        </div>
+                                    </li>
+
+                                    <!-- TEMPLATE ITEM -->
+                                    <li class="flex items-center justify-between bg-[#181818] rounded-lg p-4">
+                                        <div class="flex items-center gap-4">
+                                            <div class="bg-gray-500/20 p-3 rounded-xl text-lg">
+                                                <i class="fa-solid fa-cubes"></i>
+                                            </div>
+
+                                            <div>
+                                                <h4 class="font-semibold text-sm">Lobby Core</h4>
+                                                <p class="text-xs text-gray-400">lobby_core_v2</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center gap-6 text-sm">
+                                            <div class="text-center">
+                                                <p class="text-gray-400 text-xs">Instances</p>
+                                                <p class="font-semibold">2</p>
+                                            </div>
+
+                                            <span class="px-3 py-1 rounded-full text-xs font-semibold
+                                 bg-gray-500/20 text-gray-400">
+                                                Auto-scale OFF
+                                            </span>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL CREATE SERVER WITH TEMPLATE-->
+                <div class="fixed inset-0 bg-black/70 flex items-center justify-center hidden" id="createServerModal">
+
+                    <div class="bg-[#111] rounded-2xl w-full max-w-2xl p-6 border border-neutral-700">
+
+                        <!-- Header -->
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-lg font-semibold">Create New Server from Template</h3>
+                            <button class="text-gray-400 hover:text-white">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+
+                        <!-- Form -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                            <!-- Server Name -->
+                            <div>
+                                <label class="text-xs text-gray-400">Server Name</label>
+                                <input type="text"
+                                    class="w-full mt-1 p-2 rounded-lg bg-[#181818] border border-neutral-700 outline-none text-sm"
+                                    placeholder="bw-01">
+                            </div>
+
+                            <!-- Template -->
+                            <div>
+                                <label class="text-xs text-gray-400">Template</label>
+                                <select
+                                    class="w-full mt-1 p-2 rounded-lg bg-[#181818] border border-neutral-700 outline-none text-sm">
+                                    <option>bw_summer_2024</option>
+                                    <option>lobby_core_v2</option>
+                                    <option>practice_v1</option>
+                                </select>
+                            </div>
+
+                            <!-- Memory -->
+                            <div>
+                                <label class="text-xs text-gray-400">Memory (MB)</label>
+                                <input type="number"
+                                    class="w-full mt-1 p-2 rounded-lg bg-[#181818] border border-neutral-700 outline-none text-sm"
+                                    value="2048">
+                            </div>
+
+                            <!-- CPU -->
+                            <div>
+                                <label class="text-xs text-gray-400">CPU (%)</label>
+                                <input type="number"
+                                    class="w-full mt-1 p-2 rounded-lg bg-[#181818] border border-neutral-700 outline-none text-sm"
+                                    value="100">
+                            </div>
+
+                            <!-- Auto Start -->
+                            <div class="col-span-2 flex items-center gap-3 mt-2">
+                                <input type="checkbox" checked>
+                                <span class="text-sm text-gray-300">Auto-start after creation</span>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="flex justify-end gap-3 mt-6">
+                            <button class="px-4 py-2 rounded-lg bg-gray-600 hover:bg-gray-700 font-semibold">
+                                Cancel
+                            </button>
+
+                            <button class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 font-semibold">
+                                Create Server
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

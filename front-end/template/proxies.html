@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BitePanel | Proxies</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c3423ba623.js" crossorigin="anonymous"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                },
+            },
+            plugins: [
+                function ({ addUtilities }) {
+                    addUtilities({
+                        '.scrollbar-thin': {
+                            scrollbarWidth: 'thin',
+                        },
+                        '.scrollbar-thumb-neutral-700': {
+                            scrollbarColor: '#404040 transparent',
+                        },
+                    })
+                },
+            ],
+        }
+    </script>
+
+</head>
+
+<body class="min-h-screen bg-[#080808] text-white font-montserrat">
+
+    <!-- HEADER -->
+    <header class="pt-5">
+        <div class="max-w-[1650px] mx-auto flex justify-center">
+            <nav class="bg-black/40 border border-cyan-400/20 rounded-full px-4 py-2">
+                <ul class="flex items-center gap-3">
+
+                    <li>
+                        <a href="main.html"
+                            class="px-6 py-2 rounded-full font-bold text-sm hover:border hover:border-blue-500 hover:bg-black">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="servers.html"
+                            class="px-6 py-2 rounded-full font-bold text-sm hover:border hover:border-blue-500 hover:bg-black">
+                            Nodes
+                        </a>
+                    </li>
+
+                    <li class="px-6 py-2 rounded-full border-2 border-transparent
+                               bg-gradient-to-b from-neutral-700 to-neutral-900
+                               bg-clip-padding
+                               border-gradient-to-r from-blue-900 to-cyan-400">
+                        <a href="#" class="font-bold text-sm">Proxies</a>
+                    </li>
+
+                    <li>
+                        <a href="databases.html"
+                            class="px-6 py-2 rounded-full font-bold text-sm hover:border hover:border-blue-500 hover:bg-black">
+                            Database
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="pt-12">
+        <div class="max-w-[1650px] mx-auto px-4">
+
+            <!-- PAGE HEADER -->
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h2 class="text-lg font-semibold">Proxy Management</h2>
+                    <p class="text-sm text-gray-400">
+                        Control network entry points and traffic distribution
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                    <!-- CREATE PROXY (PRIMARY) -->
+                    <div class="group rounded-2xl p-5 bg-gradient-to-bl from-black via-[#131313] to-black
+               border border-neutral-700 hover:border-emerald-500/50
+               transition cursor-pointer">
+
+                        <div class="flex items-center gap-4">
+                            <div class="bg-emerald-500/20 p-4 rounded-xl text-2xl text-emerald-400
+                       group-hover:scale-105 transition">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-base">Create Proxy</h4>
+                                <p class="text-sm text-gray-400 max-w-xs">
+                                    Deploy a new proxy instance on a selected node.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BULK CONTROL (SECONDARY) -->
+                    <div class="group rounded-2xl p-5 bg-[#101010]
+               border border-neutral-800 hover:border-amber-500/50
+               transition cursor-pointer">
+
+                        <div class="flex items-center gap-4">
+                            <div class="bg-amber-500/20 p-4 rounded-xl text-xl text-amber-400
+                       group-hover:scale-105 transition">
+                                <i class="fa-solid fa-power-off"></i>
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-base">Bulk Start / Stop</h4>
+                                <p class="text-sm text-gray-400 max-w-xs">
+                                    Start or stop all proxies in a single action.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MAIN GRID -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <!-- PROXY LIST -->
+                <div class="lg:col-span-2 space-y-4">
+
+                    <!-- PROXY ITEM -->
+                    <div class="bg-gradient-to-bl from-black via-[#131313] to-black
+           border border-neutral-700 rounded-2xl p-4">
+
+                        <!-- TOP: INFO + METRICS -->
+                        <div class="grid grid-cols-12 gap-4 items-center">
+
+                            <!-- INFO -->
+                            <div class="col-span-3 flex items-center gap-3">
+                                <div class="bg-emerald-500/20 p-3 rounded-xl text-lg text-emerald-400">
+                                    <i class="fa-solid fa-server"></i>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold text-sm flex items-center gap-2">
+                                        Proxy Brazil
+                                        <span class="text-xs px-2 py-0.5 rounded-full
+                               bg-emerald-500/20 text-emerald-400">
+                                            ONLINE
+                                        </span>
+                                    </h4>
+                                    <p class="text-xs text-gray-400">proxy_brazil_vps01</p>
+                                </div>
+                            </div>
+
+                            <!-- METRICS -->
+                            <div class="col-span-9 grid grid-cols-6 gap-3 text-center text-xs">
+
+                                <div>
+                                    <p class="text-gray-400">Servers</p>
+                                    <p class="font-bold">3</p>
+                                </div>
+
+                                <div>
+                                    <p class="text-gray-400">Players</p>
+                                    <p class="font-bold">13 / 100</p>
+                                </div>
+
+                                <div>
+                                    <p class="text-gray-400">CPU</p>
+                                    <p class="font-bold">22%</p>
+                                </div>
+
+                                <div>
+                                    <p class="text-gray-400">RAM</p>
+                                    <p class="font-bold">512MB</p>
+                                </div>
+
+                                <div>
+                                    <p class="text-gray-400">Disk</p>
+                                    <p class="font-bold">0.6GB</p>
+                                </div>
+
+                                <div>
+                                    <p class="text-gray-400">Traffic</p>
+                                    <p class="text-emerald-400 font-bold">↑ 2.4MB</p>
+                                    <p class="text-blue-400 font-bold">↓ 6.1MB</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- DIVIDER -->
+                        <div class="my-4 border-t border-neutral-800"></div>
+
+                        <!-- BOTTOM: ACTIONS -->
+                        <div class="flex justify-end gap-2">
+
+                            <button class="bg-gray-700 hover:bg-gray-600 rounded-lg px-4 py-2 text-sm">
+                                <i class="fa-solid fa-gear mr-1"></i>
+                                Config
+                            </button>
+
+                            <button class="bg-gray-700 hover:bg-gray-600 rounded-lg px-4 py-2 text-sm">
+                                <i class="fa-solid fa-file-lines mr-1"></i>
+                                Logs
+                            </button>
+
+                            <button class="bg-red-500/20 hover:bg-red-500/30 text-red-400
+                   rounded-lg px-4 py-2 text-sm">
+                                <i class="fa-solid fa-stop mr-1"></i>
+                                Stop
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CONFIG / DETAILS PANEL -->
+                <div class="bg-gradient-to-bl from-black via-[#131313] to-black
+                           border border-neutral-700 rounded-2xl p-5">
+
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-gray-500/20 p-3 rounded-xl text-lg">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-semibold">Proxy Details</h4>
+                            <p class="text-xs text-gray-400">
+                                Configuration & lifecycle controls
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- EMPTY / SELECTED STATE -->
+                    <div class="flex flex-col items-center justify-center
+                               border border-dashed border-gray-600 rounded-xl
+                               p-8 text-center text-gray-500 text-sm">
+
+                        <i class="fa-solid fa-arrow-left mb-3 text-lg"></i>
+                        Select a proxy from the list to manage it <br> Only .yml or .btcfg
+                    </div>
+
+                </div>
+
+                <!-- PROXY DETAILS MODAL -->
+                <div id="proxyModal" class="fixed inset-0 z-50 
+            bg-black/70 backdrop-blur-sm
+            flex items-center justify-center px-4">
+
+                    <!-- MODAL CARD -->
+                    <div class="w-full max-w-3xl
+                bg-gradient-to-bl from-black via-[#131313] to-black
+                border border-neutral-700 rounded-2xl shadow-xl">
+
+                        <!-- HEADER -->
+                        <div class="flex items-center justify-between p-5 border-b border-neutral-800">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-emerald-500/20 p-3 rounded-xl text-emerald-400 text-lg">
+                                    <i class="fa-solid fa-server"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-base flex items-center gap-2">
+                                        Proxy Brazil
+                                        <span class="text-xs px-2 py-0.5 rounded-full
+                                     bg-emerald-500/20 text-emerald-400">
+                                            ONLINE
+                                        </span>
+                                    </h4>
+                                    <p class="text-xs text-gray-400">proxy_brazil_vps01</p>
+                                </div>
+                            </div>
+
+                            <button onclick="closeProxyModal()" class="text-gray-400 hover:text-white transition">
+                                <i class="fa-solid fa-xmark text-xl"></i>
+                            </button>
+                        </div>
+
+                        <!-- METRICS -->
+                        <div class="p-5 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+
+                            <div>
+                                <p class="text-gray-400">Connected Servers</p>
+                                <p class="font-bold text-white">3</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-400">Players</p>
+                                <p class="font-bold text-white">13 / 100</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-400">CPU Usage</p>
+                                <p class="font-bold text-white">22%</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-400">RAM Usage</p>
+                                <p class="font-bold text-white">512MB</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-400">Disk Usage</p>
+                                <p class="font-bold text-white">1.1GB</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-400">Network In</p>
+                                <p class="font-bold text-blue-400">↓ 6.1 MB</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-400">Network Out</p>
+                                <p class="font-bold text-emerald-400">↑ 2.4 MB</p>
+                            </div>
+
+                            <div>
+                                <p class="text-gray-400">Uptime</p>
+                                <p class="font-bold text-white">2d 14h</p>
+                            </div>
+
+                        </div>
+
+                        <!-- CONNECTED PLAYERS -->
+                        <div class="px-5 pb-5">
+                            <h4 class="text-sm font-semibold mb-3">
+                                Connected Players
+                            </h4>
+
+                            <div class="border border-neutral-800 rounded-xl
+                                        max-h-64 overflow-y-auto
+                                        divide-y divide-neutral-800
+                                        scrollbar-thin scrollbar-thumb-neutral-700 scrollbar-track-transparent">
+
+                                <!-- Player -->
+                                <div class="flex items-center justify-between gap-4 p-3
+                                            hover:bg-neutral-800/40 transition text-sm">
+
+                                    <!-- LEFT: Avatar + Identity -->
+                                    <div class="flex items-center gap-3 min-w-0">
+
+                                        <img src="https://cravatar.eu/avatar/steve/64.png" alt="Steve"
+                                            class="w-10 h-10 rounded-lg border border-neutral-700 flex-shrink-0">
+
+                                        <div class="min-w-0">
+                                            <p class="font-medium truncate">Steve</p>
+                                            <p class="text-xs text-gray-500 truncate">
+                                                1a609a4e-b6ad-4f54-9f16-f0bc9038
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- CENTER: Server -->
+                                    <div class="text-xs text-gray-400 whitespace-nowrap">
+                                        bed_wars_2
+                                    </div>
+
+                                    <!-- RIGHT: Action -->
+                                    <button class="bg-red-500/20 hover:bg-red-500/30
+                                                    text-red-400 rounded-lg
+                                                    px-4 py-2 text-xs font-medium
+                                                    transition whitespace-nowrap">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                         Kick
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- ACTIONS -->
+                        <div class="flex flex-wrap justify-end gap-2 p-4 border-t border-neutral-800">
+
+                            <button class="bg-gray-700 hover:bg-gray-600
+                           rounded-lg px-4 py-2 text-sm transition">
+                                <i class="fa-solid fa-file-lines mr-2"></i>
+                                Download Logs
+                            </button>
+
+                            <button class="bg-gray-700 hover:bg-gray-600
+                           rounded-lg px-4 py-2 text-sm transition">
+                                <i class="fa-solid fa-gear mr-2"></i>
+                                Edit Config
+                            </button>
+
+                            <button class="bg-red-500/20 hover:bg-red-500/30
+                           text-red-400 rounded-lg px-4 py-2 text-sm transition">
+                                <i class="fa-solid fa-rotate mr-2"></i>
+                                Restart Proxy
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+    </main>
+
+    <script>
+        function openProxyModal() {
+            document.getElementById('proxyModal').classList.remove('hidden');
+        }
+
+        function closeProxyModal() {
+            document.getElementById('proxyModal').classList.add('hidden');
+        }
+    </script>
+
+</body>
+
+</html>

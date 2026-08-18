@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BitePanel | Home</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c3423ba623.js" crossorigin="anonymous"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="min-h-screen bg-[#080808] text-white font-montserrat">
+
+    <!-- HEADER -->
+    <header class="pt-5">
+        <div class="max-w-[1650px] mx-auto flex justify-center">
+            <nav class="bg-black/40 border border-cyan-400/20 rounded-full px-4 py-2">
+                <ul class="flex items-center gap-3">
+
+                    <!-- Selected -->
+                    <li>
+                        <a href="main.html"
+                            class="px-6 py-2 rounded-full font-bold text-sm hover:border hover:border-blue-500 hover:bg-black">
+                            Nodes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="servers.html"
+                            class="px-6 py-2 rounded-full font-bold text-sm hover:border hover:border-blue-500 hover:bg-black">
+                            Nodes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="proxies.html"
+                            class="px-6 py-2 rounded-full font-bold text-sm hover:border hover:border-blue-500 hover:bg-black">
+                            Proxies
+                        </a>
+                    </li>
+
+                    <li class="px-6 py-2 rounded-full border-2 border-transparent
+                           bg-gradient-to-b from-neutral-700 to-neutral-900
+                           bg-clip-padding
+                           border-gradient-to-r from-blue-900 to-cyan-400">
+                        <a href="#" class="font-bold text-sm">Database</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="pt-12">
+        <div class="max-w-[1650px] mx-auto px-4 space-y-8">
+
+            <!-- FAST OVERVIEW CARDS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+                <!-- SERVERS -->
+                <div class="bg-black border border-neutral-700 rounded-2xl p-5 flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-emerald-500/20 p-4 rounded-xl text-emerald-400">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">Servers Online</p>
+                            <h4 class="text-xl font-bold">13 / 16</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </main>
+
+</body>
+
+</html>

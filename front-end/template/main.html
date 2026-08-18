@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BitePanel | Home</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c3423ba623.js" crossorigin="anonymous"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="min-h-screen bg-[#080808] text-white font-montserrat">
+
+    <!-- HEADER -->
+    <header class="pt-5">
+        <div class="max-w-[1650px] mx-auto flex justify-center">
+            <nav class="bg-black/40 border border-cyan-400/20 rounded-full px-4 py-2">
+                <ul class="flex items-center gap-3">
+
+                    <!-- Selected -->
+                    <li class="px-6 py-2 rounded-full border-2 border-transparent
+                           bg-gradient-to-b from-neutral-700 to-neutral-900
+                           bg-clip-padding
+                           border-gradient-to-r from-blue-900 to-cyan-400">
+                        <a href="#" class="font-bold text-sm">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="servers.html"
+                            class="px-6 py-2 rounded-full font-bold text-sm hover:border hover:border-blue-500 hover:bg-black">
+                            Nodes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="proxies.html"
+                            class="px-6 py-2 rounded-full font-bold text-sm hover:border hover:border-blue-500 hover:bg-black">
+                            Proxies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="databases.html"
+                            class="px-6 py-2 rounded-full font-bold text-sm hover:border hover:border-blue-500 hover:bg-black">
+                            Database
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="pt-12">
+        <div class="max-w-[1650px] mx-auto px-4 space-y-8">
+
+            <!-- FAST OVERVIEW CARDS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+                <!-- SERVERS -->
+                <div class="bg-gradient-to-bl from-black via-[#131313] to-black
+                        border border-neutral-700 rounded-2xl p-5 flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-emerald-500/20 p-4 rounded-xl text-emerald-400">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">Servers Online</p>
+                            <h4 class="text-xl font-bold">13 / 16</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROXIES -->
+                <div class="bg-gradient-to-bl from-black via-[#131313] to-black
+                        border border-neutral-700 rounded-2xl p-5 flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-blue-500/20 p-4 rounded-xl text-blue-400">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">Proxies</p>
+                            <h4 class="text-xl font-bold">2 Online</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PLAYERS -->
+                <div class="bg-gradient-to-bl from-black via-[#131313] to-black
+                        border border-neutral-700 rounded-2xl p-5 flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-purple-500/20 p-4 rounded-xl text-purple-400">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">Players Online</p>
+                            <h4 class="text-xl font-bold">140</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ALERTS -->
+                <div class="bg-gradient-to-bl from-black via-[#131313] to-black
+                        border border-yellow-500/40 rounded-2xl p-5 flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-yellow-500/20 p-4 rounded-xl text-yellow-400">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">Alerts</p>
+                            <h4 class="text-xl font-bold">1 Warning</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- HEALTH + ACTIONS -->
+            <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+
+                <!-- SYSTEM HEALTH -->
+                <div class="xl:col-span-2 bg-gradient-to-bl from-black via-[#131313] to-black
+                        border border-neutral-700 rounded-2xl p-5">
+                    <h4 class="font-semibold mb-4">System Health</h4>
+
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex justify-between">
+                            <span>Nodes</span>
+                            <span class="text-emerald-400">All operational</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Proxies</span>
+                            <span class="text-emerald-400">2 Online</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Database</span>
+                            <span class="text-emerald-400">4 Online</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Disk Usage</span>
+                            <span class="text-yellow-400">78% used</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- QUICK ACTIONS -->
+                <div class="bg-gradient-to-bl from-black via-[#131313] to-black
+                        border border-neutral-700 rounded-2xl p-5">
+                    <h4 class="font-semibold mb-4">Quick Actions</h4>
+
+                    <div class="space-y-3">
+                        <button class="w-full bg-emerald-500 hover:bg-emerald-600 rounded-lg py-2 font-semibold">
+                            Create Server
+                        </button>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 rounded-lg py-2 font-semibold">
+                            Create Proxy
+                        </button>
+                        <button class="w-full bg-gray-700 hover:bg-gray-600 rounded-lg py-2">
+                            Manage Templates
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RECENT EVENTS -->
+            <div class="bg-gradient-to-bl from-black via-[#131313] to-black
+            border border-neutral-700 rounded-2xl p-5">
+
+                <!-- HEADER -->
+                <div class="flex items-center justify-between mb-4">
+                    <h4 class="font-semibold text-sm tracking-wide">Recent Activity</h4>
+
+                    <span class="text-xs text-gray-500">Live</span>
+                </div>
+
+                <!-- ACTIVITY LIST -->
+                <ul class="space-y-3 text-sm">
+
+                    <!-- ACTIVITY -->
+                    <li class="flex items-start gap-3 p-3 rounded-lg
+                   bg-gray-500/5 hover:bg-gray-500/10 transition">
+
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
+
+                        <div class="flex-1">
+                            <p class="text-gray-300">
+                                Server <span class="font-semibold text-white">bw-12</span> started
+                            </p>
+                            <span class="text-xs text-gray-500">2 minutes ago</span>
+                        </div>
+                    </li>
+
+                    <!-- ACTIVITY -->
+                    <li class="flex items-start gap-3 p-3 rounded-lg
+                   bg-gray-500/5 hover:bg-gray-500/10 transition">
+
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-yellow-500"></span>
+
+                        <div class="flex-1">
+                            <p class="text-gray-300">
+                                Proxy <span class="font-semibold text-white">Brazil</span> reached
+                                <span class="text-yellow-400 font-medium">80%</span> capacity
+                            </p>
+                            <span class="text-xs text-gray-500">8 minutes ago</span>
+                        </div>
+                    </li>
+
+                    <!-- ACTIVITY -->
+                    <li class="flex items-start gap-3 p-3 rounded-lg
+                   bg-gray-500/5 hover:bg-gray-500/10 transition">
+
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-red-500"></span>
+
+                        <div class="flex-1">
+                            <p class="text-gray-300">
+                                Server <span class="font-semibold text-white">sw-03</span> restarted
+                            </p>
+                            <span class="text-xs text-gray-500">15 minutes ago</span>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <!-- FOOTER -->
+                <div class="mt-4 text-right">
+                    <a href="#" class="text-xs font-medium text-emerald-400 hover:text-emerald-300 transition">
+                        View full activity →
+                    </a>
+                </div>
+
+            </div>
+
+
+        </div>
+    </main>
+
+</body>
+
+</html>

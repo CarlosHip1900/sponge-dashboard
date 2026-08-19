@@ -1,0 +1,30 @@
+name: First Workflow (Test)
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: The PR Agent
+        uses: The-PR-Agent/pr-agent@v0.42.0
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          cache-dependency-path: subdir/go.sum
+
+  deliver:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create .env file
+        uses: SpicyPizza/create-envfile@v2.0.3
+        with:
+          envkey_REDIS_URL: "redis://localhost:27017"
+          envkey_NATS_URL: "nats://127.0.0.1:4222"
+          sort_keys: 'false'
+          directory: ''
+          file_name: '.env'
+          fail_on_empty: 'false'

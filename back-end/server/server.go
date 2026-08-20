@@ -2,16 +2,24 @@ package server
 
 import "uuid"
 
-type Server struct {
+type TemplateServer struct {
+	imageURL  string
+	legacy    bool
+	namespace string
+	autoScale bool
+}
+
+type RunningServer struct {
 	name             string
 	id               string
 	node             string
 	proxy            string
 	platform         string
-	connectedPlayers []ServerPlayer
+	port             int8
+	connectedPlayers []ConnectedServerPlayer
 }
 
-type ServerPlayer struct {
+type ConnectedServerPlayer struct {
 	uuid            uuid.UUID
 	name            string
 	currentServerId string

@@ -1,25 +1,19 @@
 package server
 
-type ServerPlatform int
-
-const (
-	Minestom ServerPlatform = iota
-	Bukkit
-)
-
-var platforms = map[ServerPlatform]string{
-	Minestom: "minestom",
-	Bukkit:   "bukkit",
-}
-
-func (s ServerPlatform) platformName() string {
-	return platforms[s]
-}
+import "uuid"
 
 type Server struct {
-	name     string
-	id       string
-	node     string
-	proxy    string
-	platform ServerPlatform
+	name             string
+	id               string
+	node             string
+	proxy            string
+	platform         string
+	connectedPlayers []ServerPlayer
+}
+
+type ServerPlayer struct {
+	uuid            uuid.UUID
+	name            string
+	currentServerId string
+	loginTimestamp  uint64
 }

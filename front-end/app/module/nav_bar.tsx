@@ -15,7 +15,7 @@ export default function Nav_bar() {
     ];
 
     return (
-        <nav className="bg-black/40 border border-cyan-400/20 rounded-full px-4 py-2 w-max">
+        <nav className="bg-black/40 border border-cyan-400/20 rounded-full px-4 py-6 w-max">
             <ul className="flex items-center gap-3">
                 {navItems.map((item) => {
                     const isSelected = pathname === item.path;
@@ -25,9 +25,9 @@ export default function Nav_bar() {
                             <Link
                                 href={item.path}
                                 className={`
-                                    display-block px-6 py-2 rounded-full font-bold text-sm transition-all duration-200 cursor-pointer
+                                    display-block px-6 p-3 m-0 rounded-full font-bold text-sm transition-all duration-200 cursor-pointer
                                     ${isSelected
-                                    ? "text-white bg-gradient-to-b from-neutral-700 to-neutral-900 shadow-[0_0_15px_rgba(34,211,238,0.2)] border-2 border-cyan-400"
+                                    ? "text-white bg-linear-to-b from-neutral-700 to-neutral-900 shadow-[0_0_15px_rgba(34,211,238,0.2)] border-2 border-cyan-700"
                                     : "text-neutral-400 hover:text-white border-2 border-transparent hover:border-blue-500 hover:bg-black"
                                 }
                                 `}

@@ -1,13 +1,11 @@
-import NavBar from "./NavBar";
+import Nav_bar from "@/app/module/nav_bar";
 
-const HeaderPage = () => {
+export default function Header_component() {
     return (
         <header className="pt-5">
             <div className="max-w-[1650px] mx-auto flex justify-center">
-                <NavBar></NavBar>
+                <Nav_bar/>
             </div>
         </header>
     )
 }
-
-export default HeaderPage;

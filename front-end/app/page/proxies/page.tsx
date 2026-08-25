@@ -1,4 +1,4 @@
-export default function NodesPage() {
+export default function ProxiesPage() {
     return (
         <div className="p-6 text-white bg-neutral-900 rounded-xl">
             <h1>Conteúdo dos Nodes</h1>

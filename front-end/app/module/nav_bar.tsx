@@ -4,14 +4,14 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function Nav_bar() {
+export default function NavBar() {
     const pathname = usePathname();
 
     const navItems = [
         { name: "Home", path: "/" },
-        { name: "Nodes", path: "/nodes" },
-        { name: "Proxies", path: "/proxies" },
-        { name: "Database", path: "/database" },
+        { name: "Nodes", path: "/pages/nodes" },
+        { name: "Proxies", path: "/pages/proxies" },
+        { name: "Database", path: "/pages/database" },
     ];
 
     return (

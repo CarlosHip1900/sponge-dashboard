@@ -29,8 +29,7 @@ type Running struct {
 }
 
 type Player struct {
-	uuid            uuid.UUID
-	name            string
-	currentServerId string
-	loginTimestamp  uint64
+	uuid           uuid.UUID
+	name           string
+	loginTimestamp uint64
 }

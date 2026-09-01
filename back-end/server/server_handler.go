@@ -11,7 +11,7 @@ func HandlerCreateServer(writer http.ResponseWriter, request *http.Request) {
 		return
 	}
 
-	var newServer Server
+	var newServer Payload
 	err := json.NewDecoder(request.Body).Decode(&newServer)
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusBadRequest)

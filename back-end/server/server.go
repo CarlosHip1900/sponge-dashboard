@@ -1,36 +1,25 @@
 package server
 
-import "uuid"
+type ServerPlatform int
 
-type Template struct {
-	imageURL  string
-	legacy    bool
-	namespace string
-	autoScale bool
+const (
+	Minestom ServerPlatform = iota
+	Bukkit
+)
+
+var platforms = map[ServerPlatform]string{
+	Minestom: "minestom",
+	Bukkit:   "bukkit",
 }
 
-type Payload struct {
-	Namespace string `json:"name"`
-	MaxPlayer uint8  `json:"max_player"`
-	Port      uint8  `json:"port"`
-	Node      string `json:"node"`
-	Map       string `json:"map"`
-	MinRole   string `json:"min_role"`
+func (s ServerPlatform) platformName() string {
+	return platforms[s]
 }
 
-type Running struct {
+type Server struct {
 	name     string
 	id       string
 	node     string
 	proxy    string
-	platform string
-	port     int8
-	players  []Player
-}
-
-type Player struct {
-	uuid            uuid.UUID
-	name            string
-	currentServerId string
-	loginTimestamp  uint64
+	platform ServerPlatform
 }
